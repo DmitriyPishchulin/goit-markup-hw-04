@@ -233,9 +233,10 @@ img {
   display: flex;
   width: 270px;
   height: 120px;
+  background-color: var(--team-background-color);
+  border-radius: 4px;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   margin-bottom: 30px;
 }
 
@@ -289,10 +290,8 @@ img {
 .team-social-list {
   display: flex;
   margin-top: 16px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding-left: 32px;
-  padding-right: 32px;
 }
 
 .team-social-item {
@@ -300,12 +299,17 @@ img {
   height: 44px;
 }
 
+.team-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
 .team-social-link {
-  width: 44px;
-  height: 44px;
-  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
   border-radius: 50%;
-  padding: 12px;
+  align-items: center;
+  justify-content: center;
   color: var(--main-logo-color);
 }
 
@@ -378,14 +382,15 @@ img {
 }
 
 .client-link {
-  width: 170px;
-  height: 92px;
-  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--main-logo-color);
   box-sizing: border-box;
   border-radius: 4px;
   color: var(--main-logo-color);
-  padding: 16px 32px;
 }
 
 .client-link:hover,
@@ -402,9 +407,7 @@ img {
 
 .footer-flex {
   display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  align-items: baseline;
 }
 
 .footer-social-flex {
@@ -423,7 +426,6 @@ img {
 .footer-social-text {
   font-weight: 700;
   text-transform: uppercase;
-  padding-top: 12px;
   color: var(--white);
 }
 
@@ -434,11 +436,12 @@ img {
 }
 
 .footer-social-link {
-  width: 44px;
-  height: 44px;
-  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  padding: 12px;
   color: var(--white);
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -545,12 +548,15 @@ img {
   margin-bottom: 30px;
 }
 
-.portfolio-list-item:hover,
-.portfolio-list-item:focus {
+.portfolio-list-link {
+  display: block;
+}
+
+.portfolio-list-link:hover,
+.portfolio-list-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
   0px 4px 4px rgba(0, 0, 0, 0.06),
   1px 4px 6px rgba(0, 0, 0, 0.16);
-  cursor: pointer;
 }
 
 .portfolio-list-title {
